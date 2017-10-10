@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using M2SA.AppGenome;
+using M2SA.AppGenome.Data;
+using $namespace$.DataRepositories;
+namespace $namespace$
+{
+    /// <summary>
+    /// $classname$
+    /// </summary>
+    public class $classname$ : EntityBase<long>
+    {
+        #region Instance Properties        
+$properties$  		       
+        #endregion
+
+        #region Static Methods
+        public static IList<$classname$> FindWithAll()
+        {
+            
+            var repository = RepositoryManager.GetRepository<I$classname$Repository>(ModuleEnvironment.ModuleName);
+            var results = repository.LoadAll();
+            return results;
+        }
+        public static $classname$ FindById(long Id)
+        {
+            var repository = RepositoryManager.GetRepository<I$classname$Repository>(ModuleEnvironment.ModuleName);
+            var result = repository.FindById(Id);
+            return result;
+        }
+        #endregion
+
+        #region Persist Methods
+        public bool Save()
+        {
+            var repository = RepositoryManager.GetRepository<I$classname$Repository>(ModuleEnvironment.ModuleName);
+            return repository.Save(this);
+          
+        }
+        public bool Remove()
+        {
+            var repository = RepositoryManager.GetRepository<I$classname$Repository>(ModuleEnvironment.ModuleName);
+            return repository.Remove(this);
+
+        }
+        #endregion
+
+    }
+}

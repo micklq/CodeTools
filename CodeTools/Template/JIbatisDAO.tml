@@ -1,0 +1,13 @@
+﻿package $package$.data.mapper;
+
+import java.util.List;
+import java.util.Map;
+
+import $package$.data.entity.$classname$;
+
+public interface $classname$DAO
+{
+
+$function$
+
+}       

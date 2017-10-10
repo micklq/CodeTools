@@ -1,0 +1,11 @@
+﻿package $package$.data.repository; 
+
+import javax.annotation.Resource;
+
+import $package$.data.entity.$classname$;
+
+
+@Resource(name = "$clazzname$Repository")
+public interface $classname$Repository  extends BaseRepository<$classname$, Long>{
+
+}

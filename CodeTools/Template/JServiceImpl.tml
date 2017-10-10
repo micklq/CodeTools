@@ -1,0 +1,38 @@
+﻿package $package$.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+import $package$.data.repository.BaseRepository;
+import $package$.data.entity.$classname$;
+import $package$.data.mapper.$classname$DAO;
+import $package$.data.repository.$classname$Repository;
+import $package$.service.$classname$Service;
+
+  
+@Service("$clazzname$Service")
+public class $classname$ServiceImpl extends BaseServiceImpl<$classname$, Long> implements $classname$Service {
+
+	@Resource(name = "$clazzname$Repository")
+	private $classname$Repository $clazzname$Repository;
+
+	@Autowired
+	private $classname$DAO $clazzname$DAO;
+
+	@Resource(name = "$clazzname$Repository")
+	@Override
+	public void setBaseRepository(BaseRepository<$classname$, Long> baseRepository){
+
+		   super.setBaseRepository(baseRepository);
+    }
+
+$function$
+
+}

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root xmlns="http://m2sa.net/Schema/SqlMapping">
+	<module moduleName="$classname$Repository" dbName="$dbconfig$">
+    <sqlWrap  sqlName="Insert"  supportDBType="MySql,SqlServer">
+      insert into $tabname$($column$) 
+      values($param$);
+      select @@IDENTITY;
+    </sqlWrap>
+    <sqlWrap  sqlName="Update"  supportDBType="MySql,SqlServer">
+      update $tabname$ 
+      set $column=param$  
+      where Id = @Id;
+    </sqlWrap>
+    <sqlWrap  sqlName="DeleteById"  supportDBType="MySql,SqlServer">
+      delete from $tabname$ where Id = @Id;
+    </sqlWrap>
+    <sqlWrap  sqlName="SelectById"  supportDBType="MySql,SqlServer">
+      select $clazzclm$ 
+      from $tabname$ 
+      where Id = @Id;
+    </sqlWrap>
+    <sqlWrap  sqlName="SelectAll"  supportDBType="MySql,SqlServer">
+      select $clazzclm$ 
+      from $tabname$;
+    </sqlWrap>
+  </module>
+</root>

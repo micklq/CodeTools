@@ -1,0 +1,16 @@
+﻿using M2SA.AppGenome.Data;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace $namespace$.DataRepositories
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public class $classname$Repository : SimpleRepositoryBase<$classname$, long>, I$classname$Repository
+    {
+        
+    }    
+
+    
+}

@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1340960-CFE4-4103-95E6-F63E0796947F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CodeTools</RootNamespace>
+    <AssemblyName>CodeTools</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>F:\tools\Public\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.1</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F872493E3214C06BDAB5B480FF06F0C8DD3472CD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CodeTools_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CustomControls">
+      <HintPath>Libs\CustomControls.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>Libs\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>Libs\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.mocks">
+      <HintPath>Libs\nunit.mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\CShape\ClazzCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CShape\ClazzCtrl.Designer.cs">
+      <DependentUpon>ClazzCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CShape\MainCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CShape\MainCtrl.Designer.cs">
+      <DependentUpon>MainCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CShape\RepositoryCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CShape\RepositoryCtrl.Designer.cs">
+      <DependentUpon>RepositoryCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Java\iBatisDAOCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Java\iBatisDAOCtrl.Designer.cs">
+      <DependentUpon>iBatisDAOCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Java\MainCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Java\MainCtrl.Designer.cs">
+      <DependentUpon>MainCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Java\RepositoryCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Java\RepositoryCtrl.Designer.cs">
+      <DependentUpon>RepositoryCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Java\ServiceCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Java\ServiceCtrl.Designer.cs">
+      <DependentUpon>ServiceCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CShape\Clazz.cs" />
+    <Compile Include="CShape\CShapeGenrate.cs" />
+    <Compile Include="CShape\ModuleEnvironment.cs" />
+    <Compile Include="Java\JavaGenrate.cs" />
+    <Compile Include="Util\DBType.cs" />
+    <Compile Include="CShape\RepositoryMapper.cs" />
+    <Compile Include="CShape\Repository.cs" />
+    <Compile Include="CShape\IRepository.cs" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Template\CModuleEnvironment.tml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Java\IbatisMapper.cs" />
+    <Compile Include="Java\IbatisDAO.cs" />
+    <Compile Include="Java\Repository.cs" />
+    <Compile Include="Java\ServiceImpl.cs" />
+    <Compile Include="Java\Service.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test\MySqlTest.cs" />
+    <Compile Include="Test\TemplateTest.cs" />
+    <Compile Include="Test\TestBase.cs" />
+    <Compile Include="Test\TestHelper.cs" />
+    <Compile Include="Util\ConvertHelper.cs" />
+    <Compile Include="Util\IOHelper.cs" />
+    <Compile Include="Util\SqlServiceHelper.cs" />
+    <Compile Include="Util\MySqlHelper.cs" />
+    <EmbeddedResource Include="Control\CShape\ClazzCtrl.resx">
+      <DependentUpon>ClazzCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CShape\MainCtrl.resx">
+      <DependentUpon>MainCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CShape\RepositoryCtrl.resx">
+      <DependentUpon>RepositoryCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Java\iBatisDAOCtrl.resx">
+      <DependentUpon>iBatisDAOCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Java\MainCtrl.resx">
+      <DependentUpon>MainCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Java\RepositoryCtrl.resx">
+      <DependentUpon>RepositoryCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Java\ServiceCtrl.resx">
+      <DependentUpon>ServiceCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Template\CRepositoryMapper.tml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\CIRepository.tml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\CClazz.tml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\CRepository.tml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\JIbatisDAO.tml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\JIbatisMapper.tml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\JRepository.tml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\JServiceImpl.tml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Control\PHP\" />
+    <Folder Include="PHP\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Template\JService.tml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="CodeTools.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="nunit.framework">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="nunit.mocks">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
